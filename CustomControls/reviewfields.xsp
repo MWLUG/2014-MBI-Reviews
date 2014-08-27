@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:text
+		escape="false"
+		id="title1">
+		<xp:this.value><![CDATA[#{javascript:"<h3>" + compositeData.title + "</h3>"}]]></xp:this.value>
+	</xp:text>
+	<xp:panel id="panelContent"
+		readonly="#{compositeData.readMode}">
+		<xp:table
+			styleClass="reviewTable">
+			<xp:tr>
+				<xp:td>
+					<xp:label
+						value="Your name"
+						id="label1"
+						for="rvName" />
+				</xp:td>
+				<xp:td>
+					<xp:inputText
+						id="rvName"
+						styleClass="reviewField"
+						value="#{PageDataObject.reviewer}" />
+					<xp:span
+						rendered="#{!compositeData.readMode}"> (optional)</xp:span>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label
+						value="Product"
+						id="label2"
+						for="rvProduct" />
+				</xp:td>
+				<xp:td>
+					<xp:comboBox
+						id="rvProduct"
+						styleClass="reviewField"
+						value="#{PageDataObject.productName}">
+						<xp:selectItems>
+							<xp:this.value><![CDATA[#{Catalog.selectItems}]]></xp:this.value>
+						</xp:selectItems>
+					</xp:comboBox>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label
+						value="Comments"
+						id="label3"
+						for="rvComments" />
+				</xp:td>
+				<xp:td>
+					<xp:inputTextarea
+						id="rvComments"
+						styleClass="reviewField multi"
+						value="#{PageDataObject.comments}" />
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+	</xp:panel>
+	<xp:panel>
+		<xp:div
+			styleClass="btnBottom alignCenter"
+			rendered="#{compositeData.readMode}">
+			<xp:button
+				id="btnEdit"
+				value="Edit">
+				<xp:eventHandler
+					event="onclick"
+					submit="true"
+					refreshMode="complete">
+					<xp:this.action><![CDATA[#{javascript:var url = compositeData.editTarget + "?documentId=" + compositeData.documentId + "&action=editDocument";
+context.redirectToPage(url);}]]></xp:this.action>
+				</xp:eventHandler>
+			</xp:button>
+			<xp:button
+				id="btnClose"
+				value="Close">
+				<xp:eventHandler
+					event="onclick"
+					submit="true"
+					refreshMode="norefresh">
+					<xp:this.action>
+						<xp:openPage
+							name="/home.xsp" />
+					</xp:this.action>
+				</xp:eventHandler>
+			</xp:button>
+		</xp:div>
+		<xp:div
+			styleClass="btnBottom alignCenter"
+			rendered="#{!compositeData.readMode}">
+			<xp:button
+				id="btnAddReview"
+				value="Save Review">
+				<xp:eventHandler
+					event="onclick"
+					submit="true"
+					refreshMode="complete">
+					<xp:this.action><![CDATA[#{javascript:PageDataObject.save();
+context.redirectToHome();}]]></xp:this.action>
+				</xp:eventHandler>
+			</xp:button>
+			<xp:button
+				id="btnCancel"
+				value="Cancel">
+				<xp:eventHandler
+					event="onclick"
+					submit="true"
+					refreshMode="norefresh">
+					<xp:this.action>
+						<xp:openPage
+							name="/home.xsp" />
+					</xp:this.action>
+				</xp:eventHandler>
+			</xp:button>
+		</xp:div>
+	</xp:panel>
+</xp:view>

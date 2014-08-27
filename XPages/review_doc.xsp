@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument
+			var="PageDataObject"
+			formName="fmReview" />
+	</xp:this.data>
+	<xc:cc_Layout>
+		<xp:this.facets>
+			<xc:reviewfields
+				xp:key="facet_content"
+				title="Product Review (document)"
+				editTarget="/review_doc.xsp"
+				documentId="#{javascript:param.get('documentId')}"
+				readMode="#{javascript:'openDocument'.equalsIgnoreCase(param.get('action'))}" />
+		</xp:this.facets>
+	</xc:cc_Layout>
+</xp:view>

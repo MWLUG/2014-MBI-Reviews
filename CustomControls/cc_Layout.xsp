@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:div styleClass="wrap">
+		<h1>Midwest Bicycling Inc.</h1>
+		<xp:div id="content" styleClass="content">
+			<xp:callback facetName="facet_content" id="callback1"></xp:callback>
+		</xp:div>
+	</xp:div>
+</xp:view>

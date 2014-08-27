@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoView
+			var="vwAll"
+			viewName="vwAllReviews" />
+	</xp:this.data>
+	<xc:cc_Layout>
+		<xp:this.facets>
+			<xc:reviews
+				xp:key="facet_content"
+				target_page="/review_doc.xsp"
+				title_btn_add="Add Review"
+				title_btn_open="Open Review">
+			</xc:reviews></xp:this.facets>
+	</xc:cc_Layout>
+</xp:view>

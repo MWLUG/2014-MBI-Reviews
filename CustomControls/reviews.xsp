@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:div>
+		<xp:div
+			styleClass="btnTop">
+			<xp:button
+				id="btn_add"
+				value="#{compositeData.title_btn_add}">
+				<xp:eventHandler
+					event="onclick"
+					submit="true"
+					refreshMode="complete">
+					<xp:this.action>
+						<xp:openPage
+							name="#{compositeData.target_page}" />
+					</xp:this.action>
+				</xp:eventHandler>
+			</xp:button>
+		</xp:div>
+		<xp:repeat
+			id="repeat1"
+			rows="30"
+			value="#{vwAll}"
+			var="Review">
+			<xp:this.facets>
+				<xp:text
+					disableTheme="true"
+					xp:key="header"
+					escape="false">
+					<xp:this.value>
+								<![CDATA[<table class='bordered'>]]>
+					</xp:this.value>
+				</xp:text>
+				<xp:text
+					disableTheme="true"
+					xp:key="footer"
+					escape="false">
+					<xp:this.value>
+								<![CDATA[</table>]]>
+					</xp:this.value>
+				</xp:text>
+			</xp:this.facets>
+			<xp:tr>
+				<xp:td>
+					<xp:text
+						escape="true"
+						id="cmpProduct"
+						value="#{Review.productName}" />
+				</xp:td>
+				<xp:td>
+					<xp:button
+						value="#{compositeData.title_btn_open}"
+						id="btn_open">
+						<xp:eventHandler
+							event="onclick"
+							submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="#{compositeData.target_page}"
+									target="openDocument"
+									documentId="#{javascript:Review.getUniversalID()}" />
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:td>
+			</xp:tr>
+		</xp:repeat>
+	</xp:div>
+</xp:view>

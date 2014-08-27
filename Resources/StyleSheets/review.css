@@ -1,0 +1,79 @@
+body {
+	background-color: #efefef;
+	font-size: 16px;
+}
+
+table {
+	width: auto;
+}
+
+table.reviewTable td, table.bordered td {
+	padding: 6px;	
+}
+
+table.reviewTable td table td {
+	padding: 0;
+}
+
+table.bordered {
+	border: 1px solid #cccccc;
+}
+
+table.reviewTable tr {
+	vertical-align: top;
+}
+
+.wrap {
+	background: #fff;
+	border: 1px solid #999;
+	margin: 0 auto;
+	padding: 15px;
+	width: 900px;
+}
+
+.content {
+	margin-top:12px;
+}
+
+button {
+	background-color: #efefef;
+	background-image: none;
+	font-size: 15px;
+	color: #333;
+}
+
+.xspButtonCommand + .xspButtonCommand {
+	margin-left: 24px;	
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.xspTextLabel {
+	font-weight: bold;
+	padding-right: 12px;
+	width: 100px;
+}
+
+.reviewField {
+	margin: 0 12px 0 0;
+	width: 450px;	
+}
+
+.btnTop {
+	margin: 18px 0 12px 0;	
+}
+
+.btnBottom {
+	margin: 24px 0 6px 0;	
+}
+
+.multi {
+	height: 150px;	
+}
+

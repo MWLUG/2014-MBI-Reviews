@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.1" replicaid="85257D3F006B6D6B" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1ae" sequence="42" unid="DC3533157ED922EB85257D4000407575">
+<created><datetime dst="true">20140826T074403,73-04</datetime></created>
+<modified><datetime dst="true">20140826T082148,83-04</datetime></modified>
+<revised><datetime dst="true">20140826T082148,82-04</datetime></revised>
+<lastaccessed><datetime dst="true">20140826T082148,82-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20140826T074405,59-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Mike McGarel/OU=Chicago/O=CZARNOWSKI</name><name>CN=Devin Olson/OU=Chicago/O=CZARNOWSKI</name></updatedby>
+<wassignedby><name>CN=Devin Olson/OU=Chicago/O=CZARNOWSKI</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>com/mwlug/AD104/Catalog.java</text></item>
+
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>com/mwlug/AD104/Catalog.java</text></item>
+
+</note>
